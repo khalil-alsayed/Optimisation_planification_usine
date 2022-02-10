@@ -1,0 +1,28 @@
+# Reset the AMPL enviroment
+reset;
+
+#load the model
+model projet7.mod;
+
+#load the data 
+data projet7.dat;
+
+/*#display the problem formulation
+expand profit;*/
+
+#change the solver (optional)
+option solver cplex;
+
+#solve
+solve;
+
+#show results
+display profit;
+display quantite_fabriquee;
+display quantite_vendue;
+display quantite_stockee;
+display maintenance;
+display achat_machine;
+
+
+
